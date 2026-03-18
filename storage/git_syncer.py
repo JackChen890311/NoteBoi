@@ -9,9 +9,9 @@ class GitSyncer:
 
     def sync(self, message: str) -> bool:
         try:
-            # self._run(["git", "add", "-A"])
-            # self._run(["git", "commit", "-m", message])
-            # self._run(["git", "push"])
+            self._run(["git", "add", "-A"])
+            self._run(["git", "commit", "-m", message])
+            self._run(["git", "push"])
             return True
         except subprocess.CalledProcessError:
             return False  # 無變更或 push 失敗時靜默處理
