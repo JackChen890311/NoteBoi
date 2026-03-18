@@ -5,7 +5,7 @@ from llm.base import LLMClient, LLMResponse
 
 
 class GeminiClient(LLMClient):
-    def __init__(self, api_key: str, model: str = "gemini-1.5-flash"):
+    def __init__(self, api_key: str, model: str = "gemini-3-flash-preview"):
         self._client     = genai.Client(api_key=api_key)
         self._model_name = model
 
